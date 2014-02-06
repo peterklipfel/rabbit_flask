@@ -35,5 +35,10 @@ def eatJson():
     return json.dumps({'ok' : False})
 
 
+@app.route('/', methods=['GET'])
+def statuscheck():
+  json_results = {'ok' : True}
+  return json.dumps(json_results)
+
 if __name__ == '__main__':
   app.run(debug=True)
